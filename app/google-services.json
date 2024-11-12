@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135182181644",
+    "project_id": "agricultural-trade",
+    "storage_bucket": "agricultural-trade.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135182181644:android:e8af293963979681fcd529",
+        "android_client_info": {
+          "package_name": "com.example.agriculturaltrade"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvCj_OEy4ZdG0_rG0msW4wwe6b9hND-MA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

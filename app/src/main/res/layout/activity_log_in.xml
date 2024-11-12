@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:padding="24dp"
+    android:background="@mipmap/bg_banner_foreground"
+    android:scrollbars="none"
+    tools:context=".Authentication.Log_in">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="12dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Wecome Back"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Login to continue"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Email"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingTop="60dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/background_chat_input"
+            android:drawableLeft="@drawable/ic_user"
+            android:hint="Email"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/primary_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textNotificationEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Please enter your email!"
+            android:textColor="@color/error"
+            android:visibility="gone"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Password"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:paddingTop="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/background_chat_input"
+            android:hint="Password"
+            android:drawableLeft="@drawable/baseline_password_24"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/primary_text"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/textForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Forgot Password?"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/textNotificationPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="Please enter your password "
+            android:textColor="@color/error"
+            android:visibility="gone"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:text="Sign in"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textCreateNewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Create New Account"
+            android:textColor="@color/primary"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

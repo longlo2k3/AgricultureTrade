@@ -119,7 +119,6 @@ public class HomeFragment extends Fragment {
                         Toast.makeText(getContext(), "Error: " + task.getException() , Toast.LENGTH_SHORT).show();
                     }
                 });
-
         newRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         newProductModelList = new ArrayList<>();
         newProductAdapter = new NewProductAdapter(getContext(), newProductModelList);

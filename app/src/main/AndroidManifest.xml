@@ -11,7 +11,7 @@
         android:theme="@style/Theme.AgriculturalTrade"
         tools:targetApi="31">
         <activity
-            android:name=".Adapter.SliderAdapter"
+            android:name=".Adapters.SliderAdapter"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
@@ -60,7 +60,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->

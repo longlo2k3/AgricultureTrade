@@ -13,8 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.agriculturaltrade.Adapter.SliderAdapter;
-import com.example.agriculturaltrade.MainActivity;
+import com.example.agriculturaltrade.Adapters.SliderAdapter;
 import com.example.agriculturaltrade.R;
 
 public class OnBoardingActivity extends AppCompatActivity {

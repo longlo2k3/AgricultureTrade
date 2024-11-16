@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.agriculturaltrade.MainActivity;
+import com.example.agriculturaltrade.Activities.MainActivity;
 import com.example.agriculturaltrade.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,7 +30,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register2);
+        setContentView(R.layout.activity_register);
 
         // Khởi tạo FirebaseAuth
         mAuth = FirebaseAuth.getInstance();

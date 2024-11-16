@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.agriculturaltrade.MainActivity;
+import com.example.agriculturaltrade.Activities.MainActivity;
 import com.example.agriculturaltrade.Activities.OnBoardingActivity;
 import com.example.agriculturaltrade.R;
 import com.google.firebase.auth.FirebaseAuth;

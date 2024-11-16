@@ -1,4 +1,4 @@
-package com.example.agriculturaltrade.Adapter;
+package com.example.agriculturaltrade.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,6 +20,7 @@ public class SliderAdapter extends PagerAdapter {
 
     // LayoutInflater sử dụng để tạo view tu xml
     LayoutInflater layoutInflater;
+
 
     public SliderAdapter(Context context) {
         this.context = context;

@@ -1,6 +1,8 @@
 package com.example.agriculturaltrade.Models;
 
-public class CategoryModel {
+import java.io.Serializable;
+
+public class CategoryModel implements Serializable {
 
     String img_url;
     String name;

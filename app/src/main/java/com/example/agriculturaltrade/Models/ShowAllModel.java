@@ -2,21 +2,24 @@ package com.example.agriculturaltrade.Models;
 
 import java.io.Serializable;
 
-public class NewProductModel implements Serializable {
+public class ShowAllModel implements Serializable {
     String img_url;
     String name;
     String description;
     String rating;
-    Integer  price;
+    Integer price;
+    String type;
+    public ShowAllModel() {
 
-    public NewProductModel() {
     }
-    public NewProductModel(String img_url, String name, String description, String rating, Integer price) {
+
+    public ShowAllModel(String img_url, String name, String description, String rating, Integer price, String type) {
         this.img_url = img_url;
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.price = price;
+        this.type = type;
     }
 
     public String getImg_url() {
@@ -51,11 +54,19 @@ public class NewProductModel implements Serializable {
         this.rating = rating;
     }
 
-    public Number getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

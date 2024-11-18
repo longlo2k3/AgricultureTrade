@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.agriculturaltrade.Activities.ShowAllActivity;
 import com.example.agriculturaltrade.Adapters.CategoryAdapter;
 import com.example.agriculturaltrade.Adapters.NewProductAdapter;
 import com.example.agriculturaltrade.Adapters.PopularProductAdapter;
@@ -33,6 +36,8 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment {
+
+    TextView catShowAll, newShowAll, popularShowAll;
 
     RecyclerView catRecyclerView, newRecyclerView,popularRecyclerView;
 
@@ -71,8 +76,38 @@ public class HomeFragment extends Fragment {
         catRecyclerView = root.findViewById(R.id.rec_category);
         newRecyclerView = root.findViewById(R.id.new_product_rec);
         popularRecyclerView = root.findViewById(R.id.popular_rec);
+        catShowAll = root.findViewById(R.id.category_see_all);
+        newShowAll = root.findViewById(R.id.newProducts_see_all);
+        popularShowAll = root.findViewById(R.id.popular_see_all);
+
+        catShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ShowAllActivity.class);
+//                intent.putExtra("category", "category");
+                startActivity(intent);
+            }
+        });
+        newShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ShowAllActivity.class);
+//                intent.putExtra("category", "category");
+                startActivity(intent);
+            }
+        });
+        popularShowAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ShowAllActivity.class);
+//                intent.putExtra("category", "category");
+                startActivity(intent);
+            }
+        });
 
 
+
+;
         //Firestore
         db = FirebaseFirestore.getInstance();
 
@@ -99,7 +134,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
         //Category
         catRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         categoryModelList = new ArrayList<>();
@@ -119,6 +153,8 @@ public class HomeFragment extends Fragment {
                         Toast.makeText(getContext(), "Error: " + task.getException() , Toast.LENGTH_SHORT).show();
                     }
                 });
+
+        // New product
         newRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         newProductModelList = new ArrayList<>();
         newProductAdapter = new NewProductAdapter(getContext(), newProductModelList);
@@ -139,7 +175,7 @@ public class HomeFragment extends Fragment {
                 });
 
         // Popular products
-        popularRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        popularRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
         popularProductModelList = new ArrayList<>();
         popularProductAdapter = new PopularProductAdapter(getContext(), popularProductModelList);
         popularRecyclerView.setAdapter(popularProductAdapter);

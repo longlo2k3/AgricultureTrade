@@ -45,7 +45,7 @@ public class PopularProductAdapter extends RecyclerView.Adapter<PopularProductAd
         // Glide sử dụng để tạo hình anh tu url
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.popularImgUrl);
         holder.popularName.setText(list.get(position).getName());
-        holder.popularPrice.setText(String.valueOf(list.get(position).getPrice()));
+        holder.popularPrice.setText(String.valueOf(list.get(position).getPrice()) + " VNĐ");
 
         // Click về chi tiết sản phẩm
         holder.itemView.setOnClickListener(new View.OnClickListener() {

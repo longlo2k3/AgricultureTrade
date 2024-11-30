@@ -58,8 +58,6 @@ public class HomeFragment extends Fragment {
     //Firestore
     FirebaseFirestore db;
 
-    Button btn;
-
     FirebaseAuth mAuth;
     public HomeFragment() {
         // Required empty public constructor
@@ -121,18 +119,6 @@ public class HomeFragment extends Fragment {
 
         imageSlider.setImageList(slideModels);
 
-        btn = root.findViewById(R.id.btnSignOut);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth = FirebaseAuth.getInstance();
-                if(mAuth.getCurrentUser() != null){
-                    mAuth.signOut();
-                    Intent intent = new Intent(getContext(), Log_in.class);
-                    startActivity(intent);
-                }
-            }
-        });
 
         //Category
         catRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));

@@ -16,6 +16,17 @@
         android:src="@drawable/rice"
         android:scaleType="centerCrop"/>
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detailed_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Chi tiết sản phẩm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:translationY="-30dp"
@@ -79,6 +90,13 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/aclonica"
                 android:text="Description" />
+            <TextView
+                android:id="@+id/detailed_producer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Description" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -86,7 +104,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/aclonica"
-                android:text="Price"
+                android:text="Giá"
                 android:textColor="@color/primary_dark"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -135,27 +153,29 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/add_to_cart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Add to cart"
-        android:textStyle="bold"
-        android:backgroundTint="@color/aqua"
-        android:textColor="@color/white"
+        android:backgroundTint="@color/pink"
+        android:text="Thêm vào giỏ hàng"
         android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buy_now"
-
+        android:drawableLeft="@drawable/ic_cart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent=".8"/>
+        app:layout_constraintWidth_percent=".8" />
 
     <Button
         android:id="@+id/buy_now"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/aqua"
-        android:text="Buy now"
+        android:text="Mua ngay"
+        android:drawableLeft="@drawable/ic_buynow"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textStyle="bold"

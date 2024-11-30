@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ShowAllActivity">
+    tools:context=".Activities.CartActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,57 +14,65 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/green_mint"
-        app:title="All Products"
+        app:title="Giỏ hàng"
         app:titleTextColor="@color/white"
         android:minHeight="?attr/actionBarSize" />
 
-    <EditText
-        android:id="@+id/input_search"
+    <TextView
+        android:id="@+id/total_price"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@drawable/background_chat_input"
-        android:hint="Nhập tên sản phẩm"
-        android:imeOptions="actionNext"
-        android:importantForAutofill="no"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textColor="@color/primary_text"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toStartOf="@id/btn_search"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
-    <ImageView
-        android:id="@+id/btn_search"
-        android:layout_width="100dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/primary"
-        android:src="@drawable/ic_search"
+        android:backgroundTint="@color/green_mint"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:padding="18dp"
+        android:text="Giá tổng: 0 VND"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/input_search"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
-
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintWidth_percent=".9" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/show_all_rec"
+        android:id="@+id/cart_rec"
         android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buy_now"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_search" />
+        app:layout_constraintTop_toBottomOf="@+id/total_price"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <Button
+        android:id="@+id/buy_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green_mint"
+        android:drawableLeft="@drawable/ic_buynow"
+        android:text="Mua ngay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/home_toolbar_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".8" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/home_toolbar_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <!-- LinearLayout để các nút xuất hiện đều nhau theo chiều ngang -->
         <LinearLayout
@@ -124,5 +132,6 @@
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

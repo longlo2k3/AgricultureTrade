@@ -9,4 +9,7 @@
     <color name="icon_background">#20FFFFFF</color>
     <color name="error">#B00020</color>
     <color name="aqua">#00FFFF</color>
+    <color name="pink">#E24BF3</color>
+    <color name="green_mint">#66BB6A</color>
+    <color name="gray">#B0BEC5</color>
 </resources>

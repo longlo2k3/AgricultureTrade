@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/aclonica"
-                android:text="Category"
+                android:text="Loại sản phẩm"
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/aclonica"
                 android:gravity="end"
-                android:text="See All"
+                android:text="Tất cả"
                 android:textColor="@color/primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="9dp"
                         android:fontFamily="@font/aclonica"
-                        android:text="New Products"
+                        android:text="Sản phẩm mới"
                         android:textSize="21sp"
                         android:textStyle="bold" />
 
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/new_product_name"
                         android:layout_marginLeft="9dp"
-                        android:text="We provide best products." />
+                        android:text="Chúng tôi cung cấp sản phẩm tốt nhất." />
 
                     <TextView
                         android:id="@+id/newProducts_see_all"
@@ -101,7 +101,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginRight="8dp"
                         android:fontFamily="@font/aclonica"
-                        android:text="See All"
+                        android:text="Tất cả"
                         android:textColor="@color/primary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="9dp"
                     android:fontFamily="@font/aclonica"
-                    android:text="Popular Products"
+                    android:text="Sản phẩm phổ biến"
                     android:textSize="21sp"
                     android:textStyle="bold" />
 
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/popular_products"
                     android:layout_marginLeft="9dp"
-                    android:text="We provide best products." />
+                    android:text="Chúng tôi cung cấp sản phẩm tốt nhất." />
 
                 <TextView
                     android:id="@+id/popular_see_all"
@@ -151,7 +151,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="8dp"
                     android:fontFamily="@font/aclonica"
-                    android:text="See All"
+                    android:text="Tất cả"
                     android:textColor="@color/primary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -165,10 +165,6 @@
                 android:layout_margin="7dp"
                 android:layout_marginTop="6dp"
                 android:padding="5dp" />
-            <Button
-                android:id="@+id/btnSignOut"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
         </LinearLayout>
 
     </LinearLayout>

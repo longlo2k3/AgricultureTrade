@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Create New Account"
+            android:text="Tạo tài khoản mới"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Register to continue"
+            android:text="Đăng ký để tiếp túc"
             android:textColor="@color/white"
             android:textSize="10dp"
             android:textStyle="bold"/>
@@ -43,13 +43,14 @@
             android:textSize="18sp"
             android:paddingTop="60dp"
             android:textStyle="bold"/>
+
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/background_chat_input"
-            android:hint="Email"
             android:drawableLeft="@drawable/ic_user"
+            android:hint="Email"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
@@ -57,11 +58,12 @@
             android:paddingEnd="16dp"
             android:textColor="@color/primary_text"
             android:textSize="13sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Password"
+            android:text="Mật khẩu"
             android:layout_gravity="start"
             android:textColor="@color/white"
             android:paddingTop="16dp"
@@ -72,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/background_chat_input"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             android:drawableLeft="@drawable/baseline_password_24"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
@@ -85,19 +87,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="Comfirm Password"
+            android:text="Xác nhận Mật khẩu"
             android:layout_gravity="start"
             android:textColor="@color/white"
             android:paddingTop="16dp"
             android:textSize="18sp"
             android:textStyle="bold"/>
+
         <EditText
             android:id="@+id/inputConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/background_chat_input"
-            android:hint="Confirm Password"
             android:drawableLeft="@drawable/baseline_password_24"
+            android:hint="Xác nhận Mật khẩu"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:inputType="textPassword"
@@ -105,6 +108,7 @@
             android:paddingEnd="16dp"
             android:textColor="@color/primary_text"
             android:textSize="13sp" />
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
-                android:text="Sign up"
+                android:text="Đăng nhập"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
                 android:textSize="13sp"
@@ -137,9 +141,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Sign in"
+            android:text="Đăng ký"
             android:textColor="@color/primary"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
 

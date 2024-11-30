@@ -23,7 +23,7 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     private List<NewProductModel> list;
     private Context context;
 
-    public NewProductAdapter( Context context, List<NewProductModel> list) {
+    public NewProductAdapter(Context context , List<NewProductModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -38,7 +38,7 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     public void onBindViewHolder(@NonNull NewProductAdapter.Viewholder holder, int position) {
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.newImg);
         holder.newName.setText(list.get(position).getName());
-        holder.newPrice.setText(String.valueOf(list.get(position).getPrice()) );
+        holder.newPrice.setText(String.valueOf(list.get(position).getPrice())  + " VNĐ");
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

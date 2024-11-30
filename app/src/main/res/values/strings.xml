@@ -12,6 +12,11 @@
     <string name="description2">An tâm mua sắm nông sản tươi ngon với dịch vụ giao hàng tận nơi. Chúng tôi sử dụng các phương tiện vận chuyển hiện đại và tuân thủ nghiêm ngặt các quy định về vệ sinh an toàn thực phẩm.</string>
     <string name="third_slide">Nông sản sạch</string>
     <string name="description3">An tâm mua sắm nông sản tươi ngon với dịch vụ giao hàng tận nơi. Chúng tôi sử dụng các phương tiện vận chuyển hiện đại và tuân thủ nghiêm ngặt các quy định về vệ sinh an toàn thực phẩm.</string>
+    <string-array name="gender_options">
+        <item>Nam</item>
+        <item>Nữ</item>
+        <item>Khác</item>
+    </string-array>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -51,4 +56,5 @@
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_update_account">UpdateAccountActivity</string>
 </resources>

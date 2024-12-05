@@ -8,18 +8,34 @@
     tools:context=".Activities.AccountActivity">
 
     <!-- Toolbar phía trên -->
+
+    <!-- Nội dung tài khoản trong ScrollView -->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/green_mint"
-        app:title="Tài khoản"
-        app:titleTextColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Tài khoản"
+        app:titleTextColor="@color/white">
 
-    <!-- Nội dung tài khoản trong ScrollView -->
+        <TextView
+            android:id="@+id/show_my_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/ic_next"
+            android:text="Sản phẩm của bạn"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
         android:id="@+id/account_content"
         android:layout_width="match_parent"

@@ -92,7 +92,6 @@ public class UpdateAccount extends AppCompatActivity {
     private void getDataFromFirestore() {
         if (mAuth.getCurrentUser() != null) {
             String userId = mAuth.getCurrentUser().getUid(); // Lấy UID người dùng
-            System.out.println("UID người dùng hiện tại: " + userId);
 
             // Truy vấn Firestore để lấy thông tin người dùng
             db.collection("Users").document(userId).get()

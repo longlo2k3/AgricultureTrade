@@ -79,6 +79,7 @@ public class AddProductActivity extends AppCompatActivity {
         String productType = spinnerType.getSelectedItem().toString();
         String price = edtPrice.getText().toString();
         String description = edtDescription.getText().toString();
+        String rating = tvRating.getText().toString();
 
         // Kiểm tra dữ liệu nhập vào
         if (TextUtils.isEmpty(imgUrl) || TextUtils.isEmpty(productName) ||
@@ -103,10 +104,11 @@ public class AddProductActivity extends AppCompatActivity {
         product.put("description", description);
         product.put("price", priceConvert);
         product.put("type", productType);
-        product.put("rating", tvRating.getText().toString());
+        product.put("rating", rating);
 
         // Add product to Firestore
-        db.collection("NewProduct")
+        db.collection("AddProduct").document(mAuth.getCurrentUser().getUid())
+                .collection("NewProducts")
                 .add(product)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {

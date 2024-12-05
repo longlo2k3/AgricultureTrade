@@ -29,6 +29,7 @@ import android.widget.Toast;
 import com.example.agriculturaltrade.Adapters.ShowAllAdapter;
 import com.example.agriculturaltrade.Models.ShowAllModel;
 import com.example.agriculturaltrade.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -37,7 +38,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShowAllActivity extends AppCompatActivity {
-
     RecyclerView showAllRecyclerView;
     ShowAllAdapter showAllAdapter;
     List<ShowAllModel> showAllModelList;
@@ -49,7 +49,7 @@ public class ShowAllActivity extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private MediaRecorder mediaRecorder;
 
     @Override
@@ -94,6 +94,7 @@ public class ShowAllActivity extends AppCompatActivity {
             searchFromCollection("ShowAll", "name", search, tasksCompleted, totalTasks);
             searchFromCollection("NewProduct", "name", search, tasksCompleted, totalTasks);
             searchFromCollection("PopularProducts", "name", search, tasksCompleted, totalTasks);
+            searchFromCollection("AddProduct", "name", search, tasksCompleted, totalTasks);
         } else {
             // Tìm kiếm không có điều kiện
             showAllModelList.clear();
@@ -159,7 +160,7 @@ public class ShowAllActivity extends AppCompatActivity {
 
     private void searchNonCondition(){
         int[] tasksCompleted = {0}; // Dùng mảng để cập nhật giá trị tham chiếu
-        int totalTasks = 3; // Tổng số truy vấn cần hoàn thành
+        int totalTasks = 4; // Tổng số truy vấn cần hoàn thành
         // Truy vấn từ ShowAll
         db.collection("ShowAll")
                 .get()
@@ -188,6 +189,19 @@ public class ShowAllActivity extends AppCompatActivity {
 
         // Truy vấn từ PopularProduct
         db.collection("PopularProducts")
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            ShowAllModel showAllModel = document.toObject(ShowAllModel.class);
+                            showAllModelList.add(showAllModel);
+                        }
+                    }
+                    checkTasksCompleted(tasksCompleted, totalTasks, showAllAdapter);
+                });
+        // Truy vấn từ MyProduct
+        db.collection("AddProduct").document(mAuth.getCurrentUser().getUid())
+                .collection("NewProducts")
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -232,6 +246,19 @@ public class ShowAllActivity extends AppCompatActivity {
 
             // Truy vấn từ PopularProduct
             db.collection("PopularProducts")
+                    .get()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                ShowAllModel showAllModel = document.toObject(ShowAllModel.class);
+                                showAllModelList.add(showAllModel);
+                            }
+                        }
+                        checkTasksCompleted(tasksCompleted, totalTasks, showAllAdapter);
+                    });
+            // Truy vấn từ MyProduct
+            db.collection("AddProduct").document(mAuth.getCurrentUser().getUid())
+                    .collection("NewProducts")
                     .get()
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {

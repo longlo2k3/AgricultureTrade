@@ -16,13 +16,21 @@
         android:theme="@style/Theme.AgriculturalTrade"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.UpdateMyProductActivity"
+            android:exported="false"
+            android:parentActivityName=".Activities.MyProductsActivity"/>
+        <activity
+            android:name=".Activities.MyProductsActivity"
+            android:exported="false"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
             android:name=".Activities.UpdateAccount"
             android:exported="false"
-            android:parentActivityName=".Activities.AccountActivity"/>
+            android:parentActivityName=".Activities.AccountActivity" />
         <activity
             android:name=".Activities.AccountActivity"
             android:exported="false"
-            android:parentActivityName=".Activities.MainActivity"/>
+            android:parentActivityName=".Activities.MainActivity" />
         <activity
             android:name=".Activities.PaymentActivity"
             android:exported="false"

@@ -18,14 +18,19 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.agriculturaltrade.Activities.CartActivity;
+import com.example.agriculturaltrade.Activities.MyProductsActivity;
 import com.example.agriculturaltrade.Activities.ShowAllActivity;
 import com.example.agriculturaltrade.Adapters.CategoryAdapter;
+import com.example.agriculturaltrade.Adapters.MyProductAdapter;
 import com.example.agriculturaltrade.Adapters.NewProductAdapter;
 import com.example.agriculturaltrade.Adapters.PopularProductAdapter;
 import com.example.agriculturaltrade.Authentication.Log_in;
 import com.example.agriculturaltrade.Models.CategoryModel;
+import com.example.agriculturaltrade.Models.MyProductModel;
 import com.example.agriculturaltrade.Models.NewProductModel;
 import com.example.agriculturaltrade.Models.PopularProductModel;
+import com.example.agriculturaltrade.Models.ShowAllModel;
 import com.example.agriculturaltrade.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -53,12 +58,13 @@ public class HomeFragment extends Fragment {
     //List
     List<CategoryModel> categoryModelList;
     List<NewProductModel> newProductModelList;
-    List<PopularProductModel> popularProductModelList;
+    List<PopularProductModel> popularProductModelList ;
+
 
     //Firestore
     FirebaseFirestore db;
 
-    FirebaseAuth mAuth;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -145,7 +151,6 @@ public class HomeFragment extends Fragment {
         newProductModelList = new ArrayList<>();
         newProductAdapter = new NewProductAdapter(getContext(), newProductModelList);
         newRecyclerView.setAdapter(newProductAdapter);
-
         db.collection("NewProduct")
                 .get()
                 .addOnCompleteListener(task -> {
@@ -159,6 +164,10 @@ public class HomeFragment extends Fragment {
                         Toast.makeText(getContext(), "Error: " + task.getException() , Toast.LENGTH_SHORT).show();
                     }
                 });
+
+
+
+
 
         // Popular products
         popularRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
